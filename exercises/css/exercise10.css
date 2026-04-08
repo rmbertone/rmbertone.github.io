@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+}
+
+h2 {
+    text-align: center;
+    background-color: lightblue;
+    padding: 1rem;
+    margin: 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    padding: 25px;
+    margin: 0;
+    flex-wrap: wrap;
+}
+
+nav li {
+    list-style-type: none;
+    background-color: black;
+    margin: 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: lightgray;
+    padding: 1.5rem;
+}
+
+nav a:hover {
+    color: palegoldenrod;
+    background-color: black;
+}
+
+main {
+    padding: 2rem;
+}
+
+h1 {
+    color: darkblue;
+    font-size: 2rem;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
