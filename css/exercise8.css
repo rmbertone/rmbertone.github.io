@@ -1,0 +1,49 @@
+.wrapper {
+    border: 1px solid black;
+
+    /* STEP 1 */
+    display: grid;
+
+    /* STEP 2 — MUST start with PIXELS (template stage) */
+    grid-template-rows: 150px 400px 100px;
+    grid-template-columns: 200px 500px 200px;
+}
+
+/* COLORS */
+header {
+    background-color: azure;
+
+    /* STEP 3 positioning */
+    grid-row: 1 / 2;
+    grid-column: 1 / 4;
+}
+
+.emptyspaceleft {
+    background-color: blanchedalmond;
+
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+}
+
+main {
+    background-color: cornsilk;
+
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+}
+
+.emptyspaceright {
+    background-color: blanchedalmond;
+
+    /* THIS WAS WRONG BEFORE */
+    grid-row: 2 / 3;
+    grid-column: 3 / 4;
+}
+
+footer {
+    background-color: lightgray;
+
+    /* THIS IS THE KEY PART STUDENTS MISS */
+    grid-row: 3 / 4;
+    grid-column: 1 / 4;
+}
