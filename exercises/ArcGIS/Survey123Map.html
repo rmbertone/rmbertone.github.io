@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Richard Bertone | Survey Map</title>
+    <link rel="stylesheet" href="../css/exercise10.css">
+
+
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      font-family: Arial, sans-serif;
+      background-color: #0f1419;
+      color: #e6edf3;
+    }
+
+    header {
+      padding: 15px;
+      text-align: center;
+      background: #11161c;
+      font-weight: bold;
+    }
+
+    .iframe-container {
+      flex: 1; /* THIS makes it fill remaining height */
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    Flood Zone Mapping Survey
+  </header>
+
+  <div class="iframe-container">
+    <iframe src="https://arcg.is/1ezryW2"></iframe>
+  </div>
+
+</body>
+</html>
