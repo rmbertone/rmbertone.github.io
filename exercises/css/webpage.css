@@ -167,3 +167,56 @@ body.resume hr {
 body.resume h1 {
     margin-bottom: 10px;
 }
+/* ========================= */
+/* DROPDOWN MENU */
+/* ========================= */
+
+/* Parent list item */
+nav ul li {
+    position: relative;
+}
+
+/* Dropdown container */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    background-color: #121a21;
+    border: 1px solid #1f2a33;
+    min-width: 180px;
+
+    list-style: none;
+    padding: 5px 0;
+    margin: 0;
+
+    z-index: 1000;
+}
+
+/* Dropdown items */
+.dropdown-menu li {
+    width: 100%;
+}
+
+/* Dropdown links */
+.dropdown-menu a {
+    display: block;
+    padding: 10px 15px;
+
+    color: #9fb3c8;
+    font-size: 13px;
+    text-transform: none;
+    letter-spacing: 0.5px;
+}
+
+/* Hover effect */
+.dropdown-menu a:hover {
+    background-color: #1f2a33;
+    color: #ffffff;
+}
+
+/* Show on hover */
+nav ul li:hover .dropdown-menu {
+    display: block;
+}
