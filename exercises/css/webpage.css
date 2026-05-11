@@ -1,58 +1,40 @@
-/* RESET */
+/* =========================
+   RESET
+========================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* BODY + PAGE LAYOUT */
+/* =========================
+   GLOBAL THEME (DARK GIS STYLE)
+========================= */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     background-color: #0f1419;
-    color: #222;
+    color: #e6edf3;
 
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
-/* HEADER (FULL WIDTH BAR) */
+/* =========================
+   HEADER / NAV BAR
+========================= */
 header {
     background: linear-gradient(to right, #0f1419, #121a21);
-}
+    border-bottom: 1px solid #21262d;
 
-/* INNER HEADER CONTAINER (CENTERS CONTENT) */
-header {
-    padding: 0;
-}
-
-header > * {
-    max-width: 1100px;
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
     padding: 12px 20px;
 }
 
-/* FLEX LAYOUT FOR HEADER CONTENT */
-header {
-    display: flex;
-    justify-content: center;
-}
-
-header > div,
-header > h2,
-header > nav {
-    display: flex;
-    align-items: center;
-}
-
-/* GROUP NAME + NAV */
-header {
-    justify-content: center;
-    gap: 40px;
-}
-
-/* NAME */
 header h2 {
     color: #ffffff;
     font-weight: 600;
@@ -60,123 +42,153 @@ header h2 {
     letter-spacing: 1px;
 }
 
-/* NAVBAR */
+/* NAV */
 nav ul {
     list-style: none;
     display: flex;
     align-items: center;
-    gap: 25px;
+    gap: 40px;
 }
 
-/* NAV LINKS */
 nav a {
     color: #9fb3c8;
     text-decoration: none;
     font-size: 14px;
-    letter-spacing: 1px;
+    font-weight: 700;
     text-transform: uppercase;
-    font-weight: 700; /* BOLD */
     transition: color 0.2s ease;
 }
 
-/* HOVER */
 nav a:hover {
     color: #ffffff;
 }
 
-/* MAIN CONTENT */
+/* =========================
+   PAGE CONTENT CONTAINER
+========================= */
 .content {
     padding: 20px;
     max-width: 900px;
     margin: 20px auto;
-    background: white;
-
     flex: 1;
 }
 
-/* HEADINGS */
-h1 {
+/* =========================
+   TEXT STYLING
+========================= */
+h1, h2, h3 {
+    color: #ffffff;
     margin-bottom: 10px;
 }
 
-h2 {
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
-
-h3 {
-    margin-top: 15px;
-    margin-bottom: 5px;
-}
-
-/* TEXT */
 p {
     margin-bottom: 10px;
+    color: #9da5b4;
 }
 
-/* LISTS */
 ul {
     margin-left: 20px;
     margin-bottom: 15px;
+    color: #9da5b4;
 }
 
-/* ARTICLES */
-article {
-    margin-bottom: 30px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid #ccc;
+/* =========================
+   TOOLS + IMPROVEMENTS BOXES
+========================= */
+.tools,
+.changes {
+    max-width: 850px;
+    margin: 20px auto;
+    padding: 15px;
+
+    background: #161b22;
+    border: 1px solid #21262d;
+    border-radius: 10px;
+
+    color: #c9d1d9;
+
+    /* makes both boxes visually equal */
+    min-height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-/* FOOTER */
+.tools h3,
+.changes h3 {
+    color: #ffffff;
+}
+
+/* =========================
+   MAP LAYOUT
+========================= */
+.map-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.map-box {
+    width: 95%;
+    max-width: 1100px;
+    height: 600px;
+
+    border-radius: 12px;
+    overflow: hidden;
+
+    border: 1px solid #21262d;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+/* =========================
+   BUTTON
+========================= */
+.button-container {
+    text-align: center;
+    margin: 25px 0 40px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 18px;
+
+    background: #238636;
+    color: white;
+
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+
+    transition: 0.2s;
+}
+
+.btn:hover {
+    background: #2ea043;
+}
+
+/* =========================
+   FOOTER
+========================= */
 footer {
     text-align: center;
     padding: 15px;
     background-color: #0f1419;
     color: #9fb3c8;
+    border-top: 1px solid #21262d;
 }
 
-/* LINKS */
-a {
-    color: #0066cc;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* ========================= */
-/* PAGE-SPECIFIC STYLING */
-/* ========================= */
-
-body.home h1 {
-    color: #333;
-}
-
-body.projects article {
-    border-bottom: 1px solid #ccc;
-}
-
-body.resume address {
-    margin-bottom: 15px;
-}
-
-body.resume hr {
-    margin: 20px 0;
-}
-
-body.resume h1 {
-    margin-bottom: 10px;
-}
-/* ========================= */
-/* DROPDOWN MENU */
-/* ========================= */
-
-/* Parent list item */
+/* =========================
+   DROPDOWN MENU
+========================= */
 nav ul li {
     position: relative;
 }
 
-/* Dropdown container */
 .dropdown-menu {
     display: none;
     position: absolute;
@@ -194,12 +206,10 @@ nav ul li {
     z-index: 1000;
 }
 
-/* Dropdown items */
 .dropdown-menu li {
     width: 100%;
 }
 
-/* Dropdown links */
 .dropdown-menu a {
     display: block;
     padding: 10px 15px;
@@ -207,16 +217,13 @@ nav ul li {
     color: #9fb3c8;
     font-size: 13px;
     text-transform: none;
-    letter-spacing: 0.5px;
 }
 
-/* Hover effect */
 .dropdown-menu a:hover {
     background-color: #1f2a33;
     color: #ffffff;
 }
 
-/* Show on hover */
 nav ul li:hover .dropdown-menu {
     display: block;
 }
