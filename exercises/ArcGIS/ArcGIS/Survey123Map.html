@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Map</title>
+
+    <link rel="stylesheet" href="../css/webpage.css">
+
+    <style>
+
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #0f1419;
+        color: #e6edf3;
+    }
+
+    header {
+        padding: 15px;
+        text-align: center;
+        background: #11161c;
+        font-weight: bold;
+        border-bottom: 1px solid #21262d;
+    }
+
+    .content {
+        padding: 20px;
+        max-width: 900px;
+        margin: auto;
+        text-align: center;
+    }
+
+    .content p {
+        color: #9da5b4;
+        line-height: 1.6;
+    }
+
+    /* MATCHED BOX STYLE */
+    .tools,
+    .changes {
+        max-width: 850px;
+        margin: 20px auto;
+        padding: 15px;
+
+        background: #161b22;
+        border: 1px solid #21262d;
+        border-radius: 10px;
+
+        color: #c9d1d9;
+
+        min-height: 140px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .tools h3,
+    .changes h3 {
+        margin-top: 0;
+        color: #ffffff;
+    }
+
+    /* MAP FRAME (same structure as Google Map page) */
+    .map-wrapper {
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .map-box {
+        width: 95%;
+        max-width: 1100px;
+        height: 600px;
+
+        border-radius: 12px;
+        overflow: hidden;
+
+        border: 1px solid #21262d;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    }
+
+    iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+    .button-container {
+        text-align: center;
+        margin: 25px 0 40px;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 12px 18px;
+        background: #238636;
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: bold;
+        transition: 0.2s;
+    }
+
+    .btn:hover {
+        background: #2ea043;
+    }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+
+        <h1>Web GIS Portfolio</h1>
+         <nav>
+        <ul>
+            <ul>
+            <li>
+                <li><a href="index.html">Back</a></li>
+                <li><a href="Envi_Justice.html">Data Configuration</a></li>
+                <li><a href="googlemap.html">Google Map</a></li>
+            </li>
+        </ul>
+        </ul>
+    </nav>
+
+    </header>
+
+    <!-- INTRO -->
+    <div class="content">
+
+        <h2> Flood Zone Mapping Survey (Survey123) </h2>
+        <p>
+            This Survey123 application was designed to collect user-reported flood locations.
+            It demonstrates interactive data collection, spatial input validation, and real-time
+            geospatial data aggregation using ArcGIS Online. (Dynamic survey which adds questions based on the respondant. For example, will only prompt user to enter a photo if they have selected a point on the map which is not already in a flood zone.)
+        </p>
+
+    </div>
+
+
+    <!-- IMPROVEMENTS -->
+    <div class="changes">
+        <h3>Improvements From Final Submission</h3>
+        <ul>
+            <li>Improved question layout and reduced user confusion in the frequency of flooding question.</li>
+            <li>Added new features measuring the depth, and length of an entered flood.</li>
+            <li>Improved data structure for downstream GIS analysis.</li>
+        </ul>
+    </div>
+
+    <!-- EMBEDDED SURVEY -->
+    <div class="map-wrapper">
+        <div class="map-box">
+            <iframe src="https://arcg.is/1ezryW2"></iframe>
+        </div>
+    </div>
+
+    <!-- BUTTON -->
+    <div class="button-container">
+        <a href="https://arcg.is/1ezryW2" target="_blank" class="btn">
+            Open Full Survey
+        </a>
+    </div>
+
+</body>
+</html>
