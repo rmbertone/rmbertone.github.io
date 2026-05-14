@@ -7,105 +7,28 @@
 
     <link rel="stylesheet" href="../css/webpage.css">
 
+    <!-- PAGE-SPECIFIC STYLING FIX -->
     <style>
+        .changes {
+            max-width: 900px;
+            margin: 40px auto;
+            text-align: center;
+        }
 
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background-color: #0f1419;
-        color: #e6edf3;
-    }
+        .changes h3 {
+            text-align: center;
+        }
 
-    header {
-        padding: 15px;
-        text-align: center;
-        background: #11161c;
-        font-weight: bold;
-        border-bottom: 1px solid #21262d;
-    }
+        .changes ul {
+            text-align: left;
+            list-style-position: outside;
+            padding-left: 20px;
+            margin-top: 15px;
+        }
 
-    .content {
-        padding: 20px;
-        max-width: 900px;
-        margin: auto;
-        text-align: center;
-    }
-
-    .content p {
-        color: #9da5b4;
-        line-height: 1.6;
-    }
-
-    /* MATCHED BOX STYLE */
-    .tools,
-    .changes {
-        max-width: 850px;
-        margin: 20px auto;
-        padding: 15px;
-
-        background: #161b22;
-        border: 1px solid #21262d;
-        border-radius: 10px;
-
-        color: #c9d1d9;
-
-        min-height: 140px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .tools h3,
-    .changes h3 {
-        margin-top: 0;
-        color: #ffffff;
-    }
-
-    /* MAP FRAME (same structure as Google Map page) */
-    .map-wrapper {
-        display: flex;
-        justify-content: center;
-        padding: 20px;
-    }
-
-    .map-box {
-        width: 95%;
-        max-width: 1100px;
-        height: 600px;
-
-        border-radius: 12px;
-        overflow: hidden;
-
-        border: 1px solid #21262d;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-    }
-
-    iframe {
-        width: 100%;
-        height: 100%;
-        border: none;
-    }
-
-    .button-container {
-        text-align: center;
-        margin: 25px 0 40px;
-    }
-
-    .btn {
-        display: inline-block;
-        padding: 12px 18px;
-        background: #238636;
-        color: white;
-        text-decoration: none;
-        border-radius: 8px;
-        font-weight: bold;
-        transition: 0.2s;
-    }
-
-    .btn:hover {
-        background: #2ea043;
-    }
-
+        .changes li {
+            text-align: left;
+        }
     </style>
 </head>
 
@@ -113,26 +36,30 @@
 
     <!-- HEADER -->
     <header>
+        <h2>
+            <a href="../../exercises/webpage/contact.html" class="header-name">
+                Richard Bertone
+            </a>
+        </h2>
 
-        <h1>Richard Bertone - Web GIS Portfolio</h1>
-         <nav>
-        <ul>
+        <h1>Web GIS Portfolio</h1>
+
+        <nav>
             <ul>
-            <li>
-                <li><a href="index.html">Back</a></li>
-                <li><a href="Envi_Justice.html">Data Configuration</a></li>
-                <li><a href="googlemap.html">Google Map</a></li>
-            </li>
-        </ul>
-        </ul>
-    </nav>
-
+                <li>
+                    <li><a href="index.html">Back</a></li>
+                    <li><a href="Envi_Justice.html">Data Configuration</a></li>
+                    <li><a href="googlemap.html">Google Map</a></li>
+                </li>
+            </ul>
+        </nav>
     </header>
 
     <!-- INTRO -->
     <div class="content">
 
-        <h2> Flood Zone Mapping Survey (Survey123) </h2>
+        <h2>Flood Zone Mapping Survey (Survey123)</h2>
+
         <p>
             This Survey123 application was designed to collect user-reported flood locations.
             It demonstrates interactive data collection, spatial input validation, and real-time
@@ -140,7 +67,6 @@
         </p>
 
     </div>
-
 
     <!-- IMPROVEMENTS -->
     <div class="changes">
@@ -165,6 +91,20 @@
             Open Full Survey
         </a>
     </div>
+
+
+ <!-- FOOTER -->
+<footer>
+    <p>
+        <span class="footer-year">© 2026</span>
+        <span class="footer-sep">-</span>
+        <span class="footer-name">Richard Bertone |</span>
+
+        <a href="mailto:rbertone@umass.edu" class="email-icon" title="Email me">
+            ✉
+        </a>
+    </p>
+</footer>
 
 </body>
 </html>

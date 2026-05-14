@@ -5,22 +5,51 @@
     <title>Interactive Google Map</title>
 
     <link rel="stylesheet" href="../css/webpage.css">
+
+    <!-- PAGE-SPECIFIC STYLING FIX -->
+    <style>
+        .changes {
+            max-width: 900px;
+            margin: 40px auto;
+            text-align: center;
+        }
+
+        .changes h3 {
+            text-align: center;
+        }
+
+        .changes ul {
+            text-align: left;
+            list-style-position: outside;
+            padding-left: 20px;
+            margin-top: 15px;
+        }
+
+        .changes li {
+            text-align: left;
+        }
+    </style>
 </head>
 
 <body>
 
     <!-- HEADER -->
     <header>
-        <h1>Richard Bertone - Web GIS Portfolio</h1>
-         <nav>
-        <ul>
-            <li>
+        <h2>
+            <a href="../../exercises/webpage/contact.html" class="header-name">
+                Richard Bertone
+            </a>
+        </h2>
+
+        <h1>Web GIS Portfolio</h1>
+
+        <nav>
+            <ul>
                 <li><a href="index.html">Back</a></li>
                 <li><a href="Envi_Justice.html">Data Configuration</a></li>
                 <li><a href="Survey123Map.html">Survey Map</a></li>
-            </li>
-        </ul>
-    </nav>
+            </ul>
+        </nav>
     </header>
 
     <!-- INTRO + TOOLS -->
@@ -64,7 +93,7 @@
         </div>
     </div>
 
-    <!-- OPEN IN NEW TAB BUTTON (FIXED) -->
+    <!-- OPEN IN NEW TAB BUTTON -->
     <div class="button-container">
         <a href="googlemap.html" target="_blank" class="btn">
             Open Full Interactive Map
@@ -77,6 +106,20 @@
     </script>
 
     <script src="../../temp/script.js"></script>
+
+
+     <!-- FOOTER -->
+   <footer>
+    <p>
+        <span class="footer-year">© 2026</span>
+        <span class="footer-sep">-</span>
+        <span class="footer-name">Richard Bertone |</span>
+
+        <a href="mailto:rbertone@umass.edu" class="email-icon" title="Email me">
+            ✉
+        </a>
+    </p>
+</footer>
 
 </body>
 </html>
