@@ -11,51 +11,93 @@
 
 <!-- HEADER / NAVBAR -->
 <header>
-    <h2>Richard Bertone</h2>
+    <h2>
+        <a href="contact.html">
+            Richard Bertone
+        </a>
+    </h2>
+
     <nav>
         <ul>
             <li><a href="../../index.html">Home</a></li>
 
             <li>
-                <a href="../webpage/projects.html">Projects</a>
+                <a href="projects.html">Projects</a>
                 <ul class="dropdown-menu">
-                    <li><a href="../webpage/projects.html">Data Analysis</a></li>
+                    <li><a href="projects.html">Data Analysis</a></li>
                     <li><a href="../ArcGIS/index.html">Geospatial Mapping</a></li>
                 </ul>
             </li>
 
-            <li><a href="../webpage/resume.html">Resume</a></li>
-            <li><a href="../webpage/contact.html">Contact</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
 </header>
 
-    <!-- MAIN CONTENT -->
-    <div class="content">
-        <h1>Contact</h1>
+<!-- MAIN CONTENT -->
+<div class="content">
 
-        <!-- IMAGE -->
-        <img src="images/profile.jpg" alt="Profile image" width="200">
+    <h1>Contact</h1>
 
-        <!-- WEBSITE DESCRIPTION -->
-        <h2>About This Website</h2>
-        <p>
-            This website showcases my work throughout the course, including exercises,
-            check-ins, and larger projects. It reflects my progress in web development
-            and design.
-        </p>
+    <!-- FLEX WRAPPER -->
+    <div class="contact-layout">
 
-        <!-- CONTACT INFO -->
-        <h2>Get in Touch</h2>
-        <p>Email: yourname@email.com</p>
-        <p>LinkedIn: <a href="#">Your Profile</a></p>
-        <p>GitHub: <a href="#">Your GitHub</a></p>
+        <!-- LEFT SIDE TEXT -->
+        <div class="contact-text">
+
+            <h2 class="section-title">About This Website</h2>
+            <p class="big-text">
+                This website showcases my work throughout the course, including exercises,
+                check-ins, and larger projects. It reflects my progress in web development
+                and design.
+            </p>
+
+            <h2 class="section-title">Get in Touch</h2>
+
+            <div class="contact-links big-text">
+
+                <h3>Email: rbertone@umass.edu</h3>
+
+                <h3>
+                    LinkedIn:
+                    <a href="https://www.linkedin.com/in/richard-bertone-424210366/" target="_blank">
+                        My LinkedIn Profile
+                    </a>
+                </h3>
+
+                <h3>
+                    GitHub:
+                    <a href="https://github.com/rmbertone" target="_blank">
+                        My GitHub Profile
+                    </a>
+                </h3>
+
+            </div>
+
+        </div>
+
+        <!-- RIGHT IMAGE -->
+        <div class="contact-image">
+            <img src="../../images/IMG_4072.jpeg" alt="Profile image">
+        </div>
+
     </div>
 
-    <!-- FOOTER -->
-    <footer>
-        <p>© 2026 Your Name</p>
-    </footer>
+</div>
+
+ <!-- FOOTER -->
+   <footer>
+    <p>
+        <span class="footer-year">© 2026</span>
+        <span class="footer-sep">-</span>
+        <span class="footer-name">Richard Bertone |</span>
+
+        <a href="mailto:rbertone@umass.edu" class="email-icon" title="Email me">
+            ✉
+        </a>
+    </p>
+</footer>
 
 </body>
 </html>
