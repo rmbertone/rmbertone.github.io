@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800&display=swap');
+
 /* =========================
    RESET
 ========================= */
@@ -7,11 +9,12 @@
     box-sizing: border-box;
 }
 
-/* =========================
-   GLOBAL THEME (DARK GIS STYLE)
-========================= */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Public Sans", sans-serif;
     line-height: 1.6;
     background-color: #0f1419;
     color: #e6edf3;
@@ -19,191 +22,147 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+
+    overflow-x: hidden;
 }
 
 /* =========================
-   HEADER / NAV BAR
+   GLOBAL CONTAINERS
+========================= */
+.container,
+.content {
+    width: 100%;
+    max-width: 1150px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* =========================
+   HEADER
 ========================= */
 header {
-    background: linear-gradient(to right, #0f1419, #121a21);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(15, 20, 25, 0.92);
+    backdrop-filter: blur(10px);
+
     border-bottom: 1px solid #21262d;
 
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 40px;
-    padding: 12px 20px;
+
+    padding: 16px 28px;
 }
 
+header h1,
 header h2 {
+    font-size: 20px;
+    font-weight: 700;
     color: #ffffff;
-    font-weight: 600;
-    font-size: 18px;
-    letter-spacing: 1px;
 }
 
-/* NAV */
+header h1 a,
+header h2 a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+header h1 a:hover,
+header h2 a:hover {
+    color: #36b5cc;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
 nav ul {
     list-style: none;
     display: flex;
     align-items: center;
-    gap: 40px;
+    gap: 18px;
+}
+
+nav li {
+    position: relative;
 }
 
 nav a {
     color: #9fb3c8;
     text-decoration: none;
+
     font-size: 14px;
     font-weight: 700;
+    letter-spacing: 0.5px;
     text-transform: uppercase;
-    transition: color 0.2s ease;
+
+    padding: 6px 6px;
+    position: relative;
+
+    transition: 0.2s ease;
 }
 
 nav a:hover {
     color: #ffffff;
 }
 
-/* =========================
-   PAGE CONTENT CONTAINER
-========================= */
-.content {
-    padding: 20px;
-    max-width: 900px;
-    margin: 20px auto;
-    flex: 1;
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0%;
+    height: 2px;
+    background: #36b5cc;
+    transition: 0.25s ease;
 }
 
-/* =========================
-   TEXT STYLING
-========================= */
-h1, h2, h3 {
-    color: #ffffff;
-    margin-bottom: 10px;
-}
-
-p {
-    margin-bottom: 10px;
-    color: #9da5b4;
-}
-
-ul {
-    margin-left: 20px;
-    margin-bottom: 15px;
-    color: #9da5b4;
-}
-
-/* =========================
-   TOOLS + IMPROVEMENTS BOXES
-========================= */
-.tools,
-.changes {
-    max-width: 850px;
-    margin: 20px auto;
-    padding: 15px;
-
-    background: #161b22;
-    border: 1px solid #21262d;
-    border-radius: 10px;
-
-    color: #c9d1d9;
-
-    /* makes both boxes visually equal */
-    min-height: 140px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.tools h3,
-.changes h3 {
-    color: #ffffff;
-}
-
-/* =========================
-   MAP LAYOUT
-========================= */
-.map-wrapper {
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-}
-
-.map-box {
-    width: 95%;
-    max-width: 1100px;
-    height: 600px;
-
-    border-radius: 12px;
-    overflow: hidden;
-
-    border: 1px solid #21262d;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-}
-
-#map {
+nav a:hover::after {
     width: 100%;
-    height: 100%;
 }
 
 /* =========================
-   BUTTON
+   LIST FIX
 ========================= */
-.button-container {
-    text-align: center;
-    margin: 25px 0 40px;
+ul {
+    margin: 0;
+    padding-left: 20px;
 }
 
-.btn {
-    display: inline-block;
-    padding: 12px 18px;
-
-    background: #238636;
-    color: white;
-
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
-
-    transition: 0.2s;
+li {
+    margin-bottom: 6px;
 }
 
-.btn:hover {
-    background: #2ea043;
-}
-
-/* =========================
-   FOOTER
-========================= */
-footer {
-    text-align: center;
-    padding: 15px;
-    background-color: #0f1419;
-    color: #9fb3c8;
-    border-top: 1px solid #21262d;
+/* LEFT ALIGN FIX (for pages that need it) */
+.changes ul {
+    padding-left: 20px;
+    text-align: left;
 }
 
 /* =========================
    DROPDOWN MENU
 ========================= */
-nav ul li {
-    position: relative;
-}
-
 .dropdown-menu {
     display: none;
     position: absolute;
     top: 100%;
     left: 0;
 
-    background-color: #121a21;
-    border: 1px solid #1f2a33;
-    min-width: 180px;
+    min-width: 220px;
 
-    list-style: none;
-    padding: 5px 0;
-    margin: 0;
+    background: #161b22;
+    border: 1px solid #21262d;
+    border-radius: 10px;
 
-    z-index: 1000;
+    padding: 8px 0;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+}
+
+nav li:hover .dropdown-menu {
+    display: block;
 }
 
 .dropdown-menu li {
@@ -212,18 +171,269 @@ nav ul li {
 
 .dropdown-menu a {
     display: block;
-    padding: 10px 15px;
-
-    color: #9fb3c8;
-    font-size: 13px;
+    padding: 12px 16px;
     text-transform: none;
+    font-size: 13px;
 }
 
-.dropdown-menu a:hover {
-    background-color: #1f2a33;
-    color: #ffffff;
+/* =========================
+   SPLASH
+========================= */
+.splash {
+    height: 92vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
 }
 
-nav ul li:hover .dropdown-menu {
+.splash::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top,
+        rgba(54,181,204,0.20),
+        transparent 45%);
+    animation: pulseGlow 6s ease-in-out infinite;
+}
+
+.splash h1 {
+    position: relative;
+    font-size: clamp(3rem, 8vw, 7rem);
+    font-weight: 800;
+    letter-spacing: -2px;
+
+    opacity: 0;
+    transform: translateY(-120px);
+    animation: heroDrop 1.5s ease forwards;
+}
+
+.splash p {
+    position: relative;
+    max-width: 760px;
+    margin-top: 20px;
+    margin-bottom: 90px;
+    color: #9da5b4;
+
+    opacity: 0;
+    animation: fadeUp 1.2s ease forwards;
+    animation-delay: 0.8s;
+}
+
+/* =========================
+   PROJECTS
+========================= */
+.projects {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+@media (min-width: 768px) {
+    .projects {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .project.full {
+        grid-column: span 2;
+    }
+}
+
+.project {
+    background: #161b22;
+    border: 1px solid #21262d;
+    border-radius: 14px;
+    padding: 20px;
+}
+
+.project-img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+
+    border-radius: 10px;
+    margin-bottom: 15px;
+
+    border: 1px solid #21262d;
+}
+
+/* =========================
+   MAP
+========================= */
+.map-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    padding: 25px 20px;
+}
+
+.map-box {
+    width: 95%;
+    max-width: 1150px;
+    height: 650px;
+
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid #21262d;
+}
+
+#map,
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.btn {
+    display: inline-block;
+    margin-top: 12px;
+
+    padding: 12px 18px;
+    background: linear-gradient(135deg, #238636, #2ea043);
+
+    color: white;
+    text-decoration: none;
+
+    border-radius: 8px;
+    font-weight: 700;
+    transition: 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    margin-top: auto;
+    padding: 20px;
+    text-align: center;
+
+    color: #8b949e;
+    border-top: 1px solid #21262d;
+}
+
+/* FOOTER EMAIL ICON */
+footer .email-icon {
+    margin-left: 10px;
+    color: #9fb3c8;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.2s ease;
+}
+
+footer .email-icon:hover {
+    color: #36b5cc;
+}
+
+/* =========================
+   CONTACT PAGE
+========================= */
+.contact-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.contact-text {
+    flex: 1;
+}
+
+.contact-image {
+    flex: 0 0 520px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.contact-image img {
+    width: 100%;
+    max-width: 520px;
+
+    border: 4px solid #36b5cc;
+    border-radius: 0;
+    object-fit: cover;
     display: block;
+}
+
+@media (max-width: 768px) {
+    .contact-layout {
+        flex-direction: column;
+    }
+
+    .contact-image {
+        width: 100%;
+    }
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+@keyframes heroDrop {
+    0% { opacity: 0; transform: translateY(-140px) scale(0.88); }
+    60% { opacity: 1; transform: translateY(20px) scale(1.02); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulseGlow {
+    0% { opacity: 0.5; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.05); }
+    100% { opacity: 0.5; transform: scale(1); }
+}
+
+/* =========================
+   SPACING FIXES
+========================= */
+.content h1 {
+    margin-bottom: 50px;
+}
+
+.content h2 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.content p {
+    margin-bottom: 35px;
+}
+
+.contact-text .section-title {
+    margin-top: 18px;
+    margin-bottom: 10px;
+}
+
+.contact-text .section-title:first-of-type {
+    margin-top: 0;
+}
+
+.contact-text p:last-of-type {
+    margin-bottom: 0;
+}
+
+.footer-sep {
+    margin: 0 6px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+.project .btn {
+    display: block;
+    width: fit-content;
+    margin: 16px auto 0 auto;
 }
