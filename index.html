@@ -3,46 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome</title>
+    <title>Home Page – Richard Bertone Portfolio</title>
     <link rel="stylesheet" href="exercises/css/webpage.css">
 </head>
 
 <body class="home">
 
+    
     <!-- HEADER -->
-    <header>
-        <h2>Richard Bertone</h2>
-        <nav>
-            <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="exercises/webpage/projects.html">Projects</a></li>
-            <li><a href="exercises/webpage/resume.html">Resume</a></li>
-            <li><a href="exercises/webpage/contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+   <header>
+    <h2>
+    <a href="exercises/webpage/contact.html" class="header-name">
+        Richard Bertone
+    </a>
+    </h2>
+
+    <nav>
+        <ul>
+
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+
+            <li>
+                <a href="exercises/webpage/projects.html">Projects</a>
+
+                <ul class="dropdown-menu">
+                    <li><a href="exercises/webpage/projects.html">Data Analysis</a></li>
+                    <li><a href="exercises/ArcGIS/index.html">Geospatial Mapping</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="exercises/webpage/resume.html">Resume</a>
+            </li>
+
+            <li>
+                <a href="exercises/webpage/contact.html">Contact</a>
+            </li>
+
+        </ul>
+    </nav>
+</header>
+
+
+
+
+<section class="splash">
+
+    <h1>Welcome</h1>
+
+    <p>
+        I am a data analyist with a focus on public health information.<br>
+        Here you will find my previous projects, as well as my resume and contact information.
+    </p>
+
+    <div class="scroll-indicator">
+        ↓ Scroll
+    </div>
+
+
+</section>
 
     <div class="content">
-        <h1>Welcome</h1>
+
 
         <h2>About</h2>
 
         <p>
-            Welcome to my course website. Here you can find information about my work experience and skills, as well as view full previous works.
+            This website was constructed in May 2026 for UMASS Amherst course ENG391C. <br>
+            All links for assignments completed during this course can be found below.
 
 
-        <h2>More Information</h2>
+
         <ul>
             <li><a href="exercises/webpage/index.html">View Course Assignments</a></li>
-            <li><a href="exercises/webpage/contact.html">Learn More About The Site</a></li>
+            
         </ul>
     
     </div>
 
     <!-- FOOTER -->
-    <footer>
-        <p>© 2026 Richard Bertone</p>
-    </footer>
+   <footer>
+    <p>
+        <span class="footer-year">© 2026</span>
+        <span class="footer-sep">-</span>
+        <span class="footer-name">Richard Bertone |</span>
+
+        <a href="mailto:rbertone@umass.edu" class="email-icon" title="Email me">
+            ✉
+        </a>
+    </p>
+</footer>
 
 </body>
+
 </html>
