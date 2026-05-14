@@ -64,8 +64,11 @@ header h2 {
     color: #ffffff;
 }
 
+/* HEADER NAME ALWAYS WHITE */
 header h1 a,
-header h2 a {
+header h2 a,
+header h1 a:visited,
+header h2 a:visited {
     color: #ffffff;
     text-decoration: none;
     transition: 0.2s ease;
@@ -105,6 +108,11 @@ nav a {
     transition: 0.2s ease;
 }
 
+/* NAV LINKS KEEP LIGHT BLUE ALWAYS */
+nav a:visited {
+    color: #9fb3c8;
+}
+
 nav a:hover {
     color: #ffffff;
 }
@@ -122,6 +130,18 @@ nav a::after {
 
 nav a:hover::after {
     width: 100%;
+}
+
+/* =========================
+   GLOBAL LINKS (CONTENT ONLY)
+========================= */
+a:link,
+a:visited {
+    color: #9fb3c8;
+}
+
+a:hover {
+    color: #ffffff;
 }
 
 /* =========================
@@ -295,9 +315,9 @@ iframe {
     margin-top: 12px;
 
     padding: 12px 18px;
-    background: linear-gradient(135deg, #238636, #2ea043);
+    background: linear-gradient(135deg, #27689e, #2b5088);
 
-    color: white;
+    color: #ffffff;
     text-decoration: none;
 
     border-radius: 8px;
@@ -321,7 +341,6 @@ footer {
     border-top: 1px solid #21262d;
 }
 
-/* FOOTER EMAIL ICON */
 footer .email-icon {
     margin-left: 10px;
     color: #9fb3c8;
@@ -431,9 +450,4 @@ footer .email-icon:hover {
     display: flex;
     justify-content: center;
     margin-top: 30px;
-}
-.project .btn {
-    display: block;
-    width: fit-content;
-    margin: 16px auto 0 auto;
 }
