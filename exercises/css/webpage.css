@@ -65,17 +65,13 @@ header h2 {
 }
 
 /* HEADER NAME ALWAYS WHITE */
-header h1 a,
-header h2 a,
-header h1 a:visited,
-header h2 a:visited {
+header a,
+header a:visited {
     color: #ffffff;
     text-decoration: none;
-    transition: 0.2s ease;
 }
 
-header h1 a:hover,
-header h2 a:hover {
+header a:hover {
     color: #36b5cc;
 }
 
@@ -93,7 +89,8 @@ nav li {
     position: relative;
 }
 
-nav a {
+nav a,
+nav a:visited {
     color: #9fb3c8;
     text-decoration: none;
 
@@ -103,14 +100,7 @@ nav a {
     text-transform: uppercase;
 
     padding: 6px 6px;
-    position: relative;
-
     transition: 0.2s ease;
-}
-
-/* NAV LINKS KEEP LIGHT BLUE ALWAYS */
-nav a:visited {
-    color: #9fb3c8;
 }
 
 nav a:hover {
@@ -133,13 +123,22 @@ nav a:hover::after {
 }
 
 /* =========================
-   GLOBAL LINKS (CONTENT ONLY)
+   LINKS (GLOBAL RULES)
 ========================= */
-a:link,
-a:visited {
-    color: #9fb3c8;
+
+/* normal links */
+a,
+a:link {
+    color: #60a0e6;
+    text-decoration: none;
 }
 
+/* visited links = PINK (your request) */
+a:visited {
+    color: #d18aff;
+}
+
+/* hover */
 a:hover {
     color: #ffffff;
 }
@@ -156,7 +155,6 @@ li {
     margin-bottom: 6px;
 }
 
-/* LEFT ALIGN FIX (for pages that need it) */
 .changes ul {
     padding-left: 20px;
     text-align: left;
@@ -220,7 +218,6 @@ nav li:hover .dropdown-menu {
 }
 
 .splash h1 {
-    position: relative;
     font-size: clamp(3rem, 8vw, 7rem);
     font-weight: 800;
     letter-spacing: -2px;
@@ -228,18 +225,6 @@ nav li:hover .dropdown-menu {
     opacity: 0;
     transform: translateY(-120px);
     animation: heroDrop 1.5s ease forwards;
-}
-
-.splash p {
-    position: relative;
-    max-width: 760px;
-    margin-top: 20px;
-    margin-bottom: 90px;
-    color: #9da5b4;
-
-    opacity: 0;
-    animation: fadeUp 1.2s ease forwards;
-    animation-delay: 0.8s;
 }
 
 /* =========================
@@ -310,7 +295,8 @@ iframe {
 /* =========================
    BUTTONS
 ========================= */
-.btn {
+.btn,
+.btn:visited {
     display: inline-block;
     margin-top: 12px;
 
@@ -429,19 +415,6 @@ footer .email-icon:hover {
     margin-bottom: 35px;
 }
 
-.contact-text .section-title {
-    margin-top: 18px;
-    margin-bottom: 10px;
-}
-
-.contact-text .section-title:first-of-type {
-    margin-top: 0;
-}
-
-.contact-text p:last-of-type {
-    margin-bottom: 0;
-}
-
 .footer-sep {
     margin: 0 6px;
 }
@@ -450,4 +423,7 @@ footer .email-icon:hover {
     display: flex;
     justify-content: center;
     margin-top: 30px;
+}
+.project-buttons {
+    margin-bottom: 40px;
 }
